@@ -30,11 +30,18 @@ hr {
   border-radius: 50%;
 }
 
+#main-button button {
+  --bs-btn-padding-y: .25rem;
+  --bs-btn-padding-x: .5rem; 
+  --bs-btn-font-size: .75rem; 
+  --bs-btn-color: #e67e22;
+}
+
 /*********************************
 * 1. Nav Bar Section
 *********************************/
 /* Nav */
-nav {
+#main-nav {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -48,7 +55,7 @@ nav {
 }
 
 /* Links */
-nav a {
+#main-nav a {
   flex: 1 1 auto;
   padding: 15px 20px;
   color: #e67e22;
@@ -63,24 +70,24 @@ nav a {
   cursor: pointer;
 }
 
-nav a:hover,
-nav a:focus {
+#main-nav a:hover,
+#main-nav a:focus {
   color: #ffffff;
 }
 
 /* Active link style (optional: change text color for active) */
-nav a.active {
+#main-nav a.active {
   color: #ffffff;
   font-weight: 600;
 }
 
-nav a:nth-child(1):hover ~ .animation { left: 0; width: 25%; }
-nav a:nth-child(2):hover ~ .animation { left: 25%; width: 25%; }
-nav a:nth-child(3):hover ~ .animation { left: 50%; width: 25%; }
-nav a:nth-child(4):hover ~ .animation { left: 75%; width: 25%; }
+#main-nav a:nth-child(1):hover ~ .animation { left: 0; width: 25%; }
+#main-nav a:nth-child(2):hover ~ .animation { left: 25%; width: 25%; }
+#main-nav a:nth-child(3):hover ~ .animation { left: 50%; width: 25%; }
+#main-nav a:nth-child(4):hover ~ .animation { left: 75%; width: 25%; }
 
 /* Decorative sliding bar */
-nav .animation {
+#main-nav .animation {
   position: absolute;
   top: 0;
   height: 100%;
@@ -91,10 +98,10 @@ nav .animation {
 }
 
 /* One of these should match the 'active' link */
-nav .animation.start-home  { left: 0; width: 25%; }
-nav .animation.start-work  { left: 25%; width: 25%; }
-nav .animation.start-me    { left: 50%; width: 25%; }
-nav .animation.start-contact { left: 75%; width: 25%; }
+#main-nav .animation.start-home  { left: 0; width: 25%; }
+#main-nav .animation.start-work  { left: 25%; width: 25%; }
+#main-nav .animation.start-me    { left: 50%; width: 25%; }
+#main-nav .animation.start-contact { left: 75%; width: 25%; }
 
 
 /* Page footer text */
@@ -105,7 +112,7 @@ p {
 
 /* Small screens: reduce padding */
 @media (max-width: 480px) {
-  nav a {
+  #main-nav a {
     padding: 12px 10px;
     font-size: 13px;
   }
