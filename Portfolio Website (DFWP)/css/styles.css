@@ -48,6 +48,7 @@ hr {
   margin-top: 20px;
   overflow: hidden;
   box-sizing: border-box;
+  box-shadow: 1px 1px 3px #19232e;
 }
 
 /* Links */
@@ -163,4 +164,26 @@ img {
   border-color: #19232e;
   background-color: #34495e;
   box-shadow: 2px 2px 5px #19232e;
+}
+
+/*********************************
+* 5. Featured Work Containers
+*********************************/
+/*Styling for Parent Container */
+.featured-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/*Style for each portfolio item*/
+.portfolio-item {
+  position: relative;
+  margin: 4% 10% 3%;
+  width: 45%;
+  height: 300px;
+  border-color: #19232e;
+  background-color: #34495e;
+  box-shadow: 2px 2px 5px #19232e;
+  border-radius: 5%;
 }
