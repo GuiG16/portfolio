@@ -148,18 +148,18 @@ img {
   text-align: center;
 }
 
-.expand-button .fa-chevron-up {
+.expand-button .fa-chevron-down {
   display: inline-block;
   transition: transform .3s ease;
 }
 
-.expand-button[aria-expanded='true'] .fa-chevron-up {
+.expand-button[aria-expanded='true'] .fa-chevron-down {
   transform: rotate(180deg);
 }
 
 .card {
   margin: 25px auto;
-  width: 100%;
+  width: 95%;
   border-color: #19232e;
   background-color: #34495e;
   box-shadow: 2px 2px 5px #19232e;
