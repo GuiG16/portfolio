@@ -24,7 +24,7 @@ h1 {
 }
 
 hr {
-  margin: 4% 10% 3%;
+  margin: 80px 200px 10px;
   width: 80%;
   height: 8px;
   border: none;
@@ -37,7 +37,8 @@ hr {
 *********************************/
 /* Nav */
 #main-nav {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   background-color: #34495e;
@@ -120,16 +121,28 @@ p {
 *********************************/
 /*Hero Section Headings*/
 .lp-heading {
-    text-align: center;
+  margin-top: 80px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/*Image Corner Rounding*/
-img {
+.lp-heading-2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/*Image Styling*/
+.herosection-image {
   vertical-align: middle;
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
+
+.home-intro {
+  margin: 0;
+}
+
 
 /*********************************
 * 4. Expandable Button (me page)
@@ -177,22 +190,67 @@ img {
   gap: 10px;
 }
 
+/*Image Styling*/
+.portfolio-image {
+  margin-top: 5pt;
+  margin-bottom: 8pt;
+  padding: 10pt;
+  vertical-align: middle;
+  width: 200pt;
+  height: 200pt;
+  border-radius: 30pt;
+}
+
 /*Style for each portfolio item*/
 .portfolio-item {
   position: relative;
-  margin: 4% 10% 3%;
-  width: 45%;
-  height: 300px;
+  margin: 35pt 100pt 35pt;
+  width: 300pt;
+  height: 300pt;
   border-color: #19232e;
   background-color: #34495e;
-  box-shadow: 2px 2px 5px #19232e;
-  border-radius: 5%;
+  box-shadow: 2pt 2pt 5pt #19232e;
+  border-radius: 25pt;
 }
 
-@media (max-width: 768px) {
+.badge-subject {
+  margin-top: 5pt;
+  padding: 2pt 5pt 2pt;
+  width: 25pt;
+  height: 5pt;
+  background-color: #19232e;
+  border-radius: 20pt;
+}
+
+.badge-studyplace {
+  margin: 2pt;
+  padding: 2pt 5pt 2pt;
+  width: 25pt;
+  height: 5pt;
+  background-color: #bb1019;
+  border-radius: 20pt;
+}
+
+.badge-container {
+  margin-top: 8pt;
+}
+
+@media (max-width: 768pt) {
     .featured-container {
         /* Make the blocks slightly narrower on mobile to fit two per row */
         width: 45%; 
         position: relative;
         flex-wrap: wrap;
     }
+}
+
+/*********************************
+* 6. Form
+*********************************/
+.form-control {
+  margin-left: 600;
+  width: 50%;
+  border-color: #34495e;
+  background-color: #19232e;
+  border-radius: 8pt;
+}
