@@ -12,7 +12,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link rel='stylesheet' href='css/styles.css' />
-    <script src='js/nav-bar.js'></script>
     <script src="https://kit.fontawesome.com/7d50843986.js" crossorigin="anonymous"></script>
 
     <title>G's Portfolio</title>
@@ -20,87 +19,49 @@
 
 <body>
     <section>
-        <nav id="main-nav">
+        <nav id="myTopNav">
             <a href="landing-page.html" class="nav-link">Home</a>
-            <a href="my-work.html" class="nav-link">My Work</a>
+            <!-- <a href="my-work.html" class="nav-link">My Work</a> -->
             <a href="me.html" class="nav-link active">Me</a>
             <a href="contact.html" class="nav-link">Contact</a>
-            <div class="animation start-me"></div>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div class="animation start-home"></div>
         </nav>
     </section>
+    <div class="me-div">
+    <h1 class="me-h1"> A bit about me! 🙋</h1>
+
+    <p>I'm a BSc Digital Media student at UWE Bristol, and I'm lead by an interest in design and creativity. <br>
+        I'm an aspiring UI/UX designer, and I'd like to focus on accessible and user-centred design.
+
+        In my spare time I enjoy playing tennis, <br> learning (through videos on socials, Wikipedia, and reading) and
+        gaming!
+    </p>
+
+    <h2 class="me-h2">Fun Facts🎈</h2>
+    <ul class="me-list">
+        <li>🖥️ I'm a Student Member of the Chartered Society of Designers and the British Computer Society</li>
+        <li>🥖 I speak French fluently</li>
+        <li>🌍 I'm a registered Wikipedia editor (great for keep up on my HTML!)</li>
+        <li>💂‍♂️🎺 I have played the cornet with the Band of the Welsh Guards</li>
+    </ul>
+    </div>
+
+    <button type="button" class="me-btn btn-lg"> <a class="portfolio-link" href="self-reflection.html">Self-Reflection</a></button>
+    <button type="button" class="me-btn btn-lg"><a class="portfolio-link" href="use-of-ai.html">Use of AI in this Website</a></button>
 
     <hr>
 
-    <p class="d-inline-flex gap-1">
-        <button class="expand-button" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1"
-            aria-expanded="false" aria-controls="multiCollapseExample1">
-            Self-Reflection <br> <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <button class="expand-button" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
-            aria-expanded="false" aria-controls="multiCollapseExample2">
-            Use of AI in this Website <br> <i class="fa-solid fa-chevron-down"></i>
-        </button>
-    </p>
+    <!-- <div class="me-images">
+    <img class="me-image" src="images/Education.png" alt="Education">
+    <img class="me-image" src="images/Experience.png" alt="Experience">
+    </div> -->
 
-    <div class="row mb-2">
-        <div class="col-md-6">
-            <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <div class="card card-body">
-                      <h1>Final Reflection</h1>
-    <h2>Introduction</h2>
-    <p>In this final reflection, I will discuss my experience with this assignment and the journey to its completion,
-        from start (the introductory lecture for the module) to finish.
-        I began this module with confidence, as I have a fair amount of previous experience with HTML especially but
-        also CSS. I also have experience with web and UX design and so felt very comfortable going into the assignment.
-    </p>
-    <h2>Three Compositions</h2>
-    <p>I often use Figma for UI/UX, but had never heard of it being used to create graphics before, and was surprised to
-        find we would be doing this as part of this assignment. I found the learning curve was easy to climb, and
-        quickly got the hang of it. I designed my three compositions so that one is filled (coloured in), one is
-        outlined, and the last is greyscale. I had no specific inspirations for my work; I simply spontaneously created
-        them after they popped into mind. I find this is often when I do my best work: I think of an idea and flow
-        through the design process, iterating as I go, rather than having to spend time searching for inspiration
-        switching back and forth from it to my work. I still consider inspiration to be very crucial to the overall
-        design process, but I didn’t have any for these particular graphics.</p>
-    <h2>The Website</h2>
-    <p>I started off a bit too ambitious with the website. I slowly realised, as the deadline grew closer, that some
-        things would have to be sacrificed, but I remained satisfied with the final piece. I used a colour theme that I
-        have previously used as I think it works really well: bluish greys, oranges, and whites. I decided to build my
-        website in “sections”: first the hero section, then the “Featured Work” section, third the contact form ,and
-        finally the footer, and the same on the rest of the pages. This enabled me to focus on one thing at a time and
-        smoothly move through the site as each section was created. While I have more experience with HTML than CSS, I
-        found that CSS was quite easy, especially with the help from Bootstrap, w3schools, and occasionally AI. I used
-        AI only when I was very stuck, and found it had mixed results: sometimes it was great but other times the fixes
-        weren’t successful or it changed my design without being asked.</p>
-    <h2>Conclusion</h2>
-    <p>Overall, I thoroughly enjoyed this assignment. My aim with this degree is to become a UI/UX, so this was a very
-        good experience. I also like front-end web development and I know it’s important even for designers, so I found
-        it great to learn more HTML/CSS and get used to them more. While I didn’t find it too difficult overall, I did
-        get stuck while debugging a few times but I am improving at it and noticing errors I didn’t see before.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="collapse multi-collapse" id="multiCollapseExample2">
-                <div class="card card-body">
-                    <ol>
-                        <li>I wanted to create a custom navigation bar instead of using one of the prebuilt Bootstrap
-                            modules. I first used w3schools to code the basic framework of the nav bar, to ensure it
-                            functioned properly. I then used AI, in this case ChatGPT, to help me make the nav bar
-                            animated. I then used the explanation to implement the animation myself.</li>
-                        <li>I used remove.bg to remove the background on the logo used on my homepage.</li>
-                        <li>I used ChatGPT to understand why the Bootstrap CSS file was overriding my custom CSS. This
-                            turned out to be a simple fix, rooted in CSS’ hierarchical system.</li>
-                        <li>I used ChatGPT (as well as w3schools) to help me understand why using height: 5px; didn’t
-                            change the height of my "hr" tag.</li>
-                        <li>I used ChatGPT to understand why my button wasn’t working. It turns out this was because of
-                            a HTML issue I accidentally caused after copying the button from Bootstrap, without
-                            realising it.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src='js/nav-bar.js'></script>
 
 </body>
 

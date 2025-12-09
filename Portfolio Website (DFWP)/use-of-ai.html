@@ -12,19 +12,24 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link rel='stylesheet' href='css/styles.css' />
-    <script src='js/nav-bar.js'></script>
+    <script src="https://kit.fontawesome.com/7d50843986.js" crossorigin="anonymous"></script>
 
     <title>G's Portfolio</title>
 </head>
 
 <body>
     <section>
-        <nav id="main-nav">
+        <nav id="myTopNav">
             <a href="landing-page.html" class="nav-link">Home</a>
-            <a href="my-work.html" class="nav-link">My Work</a>
-            <a href="me.html" class="nav-link">Me</a>
-            <a href="contact.html" class="nav-link active">Contact</a>
-            <div class="animation start-contact"></div>
+            <!-- <a href="my-work.html" class="nav-link">My Work</a> -->
+            <a href="me.html" class="nav-link active">Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div class="animation start-home"></div>
         </nav>
     </section>
 
@@ -43,6 +48,8 @@
         <li>I used ChatGPT to understand why my button wasn’t working. It turns out this was because of a HTML issue I
             accidentally caused after copying the button from Bootstrap and improperly pasting it.</li>
     </ol>
+
+    <script src='js/nav-bar.js'></script>
 
 </body>
 

@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  margin-top: 80pt;
+  margin-top: 65pt;
   margin-bottom: 15pt;
   text-shadow: 2pt 2pt 4pt #000;
 }
@@ -99,7 +99,7 @@ hr {
 }
 
 #myTopNav .animation.start-home    { left: 0;   width: 25%; }
-#myTopNav .animation.start-work    { left: 25%; width: 25%; }
+/* #myTopNav .animation.start-work    { left: 25%; width: 25%; } */
 #myTopNav .animation.start-me      { left: 50%; width: 25%; }
 #myTopNav .animation.start-contact { left: 75%; width: 25%; }
 
@@ -115,9 +115,19 @@ hr {
 @media screen and (max-width: 600px) {
 
    #myTopNav {
-    padding: 4pt 12pt;
-    align-items: center;     /* vertically center icon */
+    margin-left: 20pt;
+    display: flex;
+    justify-content: flex-start;
+    width: 50pt;
+    padding: 0;
+    align-items: center;
     min-height: unset;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 65px; /* Define a height for the fixed bar */
+    z-index: 1000;
   }
 
   /* hide nav links */
@@ -128,8 +138,7 @@ hr {
   /* show hamburger */
   #myTopNav a.icon {
     display: block;
-    margin-left: auto;
-    padding: 12pt;
+    padding: 14.5pt;
   }
 
   /* hamburger icon colour */
@@ -138,26 +147,40 @@ hr {
     font-size: 20px;
   }
 
-  /* remove animation bar */
+  /* removes the animation bar */
   #myTopNav .animation {
     display: none;
   }
 
-  /* collapse empty pill */
+  /* collapse */
   #myTopNav {
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 0;
   }
 
   /* expanded state */
   #myTopNav.responsive {
+    margin-left: 20pt;
+    width: 90%; 
+    height: 300pt;
+    overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
+    padding: 0;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   #myTopNav.responsive a.nav-link {
     display: block;
     text-align: center;
+  }
+
+  #myTopNav a.icon {
+    order: -1;
+    align-self: flex-start;
   }
 }
 
@@ -190,42 +213,6 @@ hr {
   margin: auto;
   margin-right: 20pt;
   margin-left: 20pt;
-}
-
-
-/*********************************
-* 4. Expandable Button (me page)
-*********************************/
-/*Style for button itself*/
-.expand-button {
-  background-color: #e67e22;
-  border: none;
-  padding: 10pt 18pt;
-  border-radius: 6pt;
-  font-size: 1rem;
-  color: #ffffff;
-  cursor: pointer;
-
-  display: inline-block;
-  min-width: 220pt;
-  text-align: center;
-}
-
-.expand-button .fa-chevron-down {
-  display: inline-block;
-  transition: transform .3s ease;
-}
-
-.expand-button[aria-expanded='true'] .fa-chevron-down {
-  transform: rotate(180deg);
-}
-
-.card {
-  margin: 25pt auto;
-  width: 95%;
-  border-color: #19232e;
-  background-color: #34495e;
-  box-shadow: 2pt 2pt 5pt #19232e;
 }
 
 /*********************************
@@ -263,6 +250,12 @@ hr {
   background-color: #34495e;
   box-shadow: 2pt 2pt 5pt #19232e;
   border-radius: 25pt;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: bold;
 }
 
 .badge-subject {
@@ -322,7 +315,44 @@ hr {
 }
 
 /*********************************
-* 6. Form
+* 6. Me Page
+*********************************/
+.me-h1 {
+  margin-left: 20pt;
+}
+
+.me-h2 {
+  margin-top: 20pt;
+  margin-left: 20pt;
+}
+
+.me-list {
+  list-style-type: none;
+}
+
+.me-images {
+  display: flex;
+  height: 400pt;
+  border-radius: 40pt;
+}
+
+.me-btn {
+  margin-top: 20pt;
+  padding: 5pt;
+  color:#ecf0f1;
+  background-color: #e67e22;
+  border: none;
+  border-radius: 10pt;
+}
+
+@media screen and (max-width: 600px) {
+  .me-images {
+  display: none;
+}
+}
+
+/*********************************
+* 7. Form (home and contact page)
 *********************************/
 .form-control {
   margin: auto;
@@ -330,4 +360,15 @@ hr {
   border-color: #34495e;
   background-color: #19232e;
   border-radius: 8pt;
+}
+
+/*********************************
+* 8. Three Compositions Page
+*********************************/
+.compositions-image {
+  margin: auto;
+  margin-bottom: 20pt;
+  height: 250pt;
+  width: 250pt;
+  border-radius: 20pt;
 }
